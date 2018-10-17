@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset ="utf-8">
+ <title>
+ Select html elements
+ </title>
+ <style>
+ .bluebox{
+ background-color: #3A5795;
+ color: white;
+ height: auto;
+ width:300px;
+ }
+ .yellowbox{
+ background-color: rgb(222, 224, 85);
+ height: auto;
+ width: auto;
+ }
+ .greenbox{
+ background-color: #31af37;
+ height: auto;
+ width: auto;
+ }
+ #great{
+ background-color: #5a3479;
+
+ }
+ p {
+     margin: 0;
+ }
+ </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ </head>
+
+ <body>
+ <div class="bluebox" id="Facebook">
+ <p>
+ Facebook is
+ <span id="great">
+ great
+ </span>
+ </p>
+ </div>
+ <div class="yellowbox" id="Apple">
+ <p>
+ Apple.
+ </p>
+ </div>
+ <div class="greenbox" id="Microsoft">
+    <p id="microsoftparagraph">
+    Microsoft.
+    </p>
+    <p><a href="https://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft Link</a></p>
+    </div>
+    <p>Enter your name<input></p>
+    <button id="fadeOutFacebook">FadeOut Facebook</button>
+    <button id="fadeInFacebook">FadeIn Facebook</button>
+    <button id="fadeToggle">fadeToggle</button>
+    <button id="animate">Animate</button>
+    <button id="changeGreat">Change Great</button>
+ <script>
+ $(function(){
+   $("#Facebook").load("ajax/somedata.txt")
+   })
+ 
+ </script>
+ </body>

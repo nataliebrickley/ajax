@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset ="utf-8">
+ <title>
+ Select html elements
+ </title>
+ <style>
+ .bluebox{
+ background-color: #3A5795;
+ color: white;
+ height: auto;
+ width:auto;
+ }
+ .yellowbox{
+ background-color: rgb(222, 224, 85);
+ height: auto;
+ width: auto;
+ }
+ .greenbox{
+ background-color: #31af37;
+ height: auto;
+ width: auto;
+ }
+ #great{
+ background-color: #5a3479;
+
+ }
+ </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ </head>
+
+ <body>
+ <div class="bluebox" id="Facebook">
+ <p>
+ Facebook is
+ <span id="great">
+ great
+ </span>
+ </p>
+ </div>
+ <div class="yellowbox" id="Apple">
+ <p>
+ Apple.
+ </p>
+ </div>
+ <div class="greenbox" id="Microsoft">
+    <p id="microsoftparagraph">
+    Microsoft.
+    </p>
+    <p><a href="https://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft Link</a></p>
+    </div>
+    <p>Enter your name<input></p>
+    <button id="changeFacebook">Change Facebook text</button>
+    <button id="changeApple">Change Apple HTML</button>
+    <button id="changeinput">Change Input Value</button>
+    <button id="changeMicrosoft">Change Microsoft</button>
+    <button id="addText">Add Text</button>
+ <script>
+ $(function(){
+   $("#changeFacebook").click(function(){
+       $("#Facebook").text("This is Facebook");
+   })
+   $("#changeApple").click(function(){
+       $("#Apple").html("<p>This is Apple</p><p>New IOS Available</p>");
+   })
+   $("#changeinput").click(function(){
+       $("input").val("Sam");
+   })
+   $("#changeMicrosoft").click(function(){
+       $("#microsoftLink").attr({"href" : "https://www.google.com", "title" : "Google"});
+   })
+   //$("#addText").click(function(){
+    //   $("#Microsoft").append("<ul><li>BMW</li><li>Audi</li></ul>");
+  // })
+  //$("#addText").click(function(){
+  //     $("#Microsoft").prepend("<ul><li>BMW</li><li>Audi</li></ul>");
+  // })
+  $("#addText").click(function(){
+       $("#microsoftparagraph").after("<p>new paragraph</p>");
+   })
+ })
+ </script>
+ </body>
+
+
+</html>
