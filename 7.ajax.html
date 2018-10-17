@@ -59,12 +59,18 @@
  $(function(){
    $("#Facebook").load("ajax/somedata.txt");
    $("#Apple").load("ajax/somedata.txt #paragraph1");
-   $("button").click(function(){
+   /*$("button").click(function(){
        $.ajax({
            url: "ajax/somedata.txt",
            success: function(data){
                $("#Microsoft").html(data)
            }
+       })
+   })*/
+   $("button").click(function(){
+       $.ajax({url: "ajax/somedata.txt"}).done(function(data){
+           $("#Microsoft").html(data);
+
        })
    })
 
