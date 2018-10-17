@@ -54,16 +54,19 @@
     <p><a href="https://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft Link</a></p>
     </div>
     <p>Enter your name<input></p>
-    <button id="fadeOutFacebook">FadeOut Facebook</button>
-    <button id="fadeInFacebook">FadeIn Facebook</button>
-    <button id="fadeToggle">fadeToggle</button>
-    <button id="animate">Animate</button>
-    <button id="changeGreat">Change Great</button>
+    <button>Button</button>
  <script>
  $(function(){
    $("#Facebook").load("ajax/somedata.txt");
    $("#Apple").load("ajax/somedata.txt #paragraph1");
-
+   $("button").click(function(){
+       $.ajax({
+           url: "ajax/somedata.txt",
+           success: function(data){
+               $("#Microsoft").html(data)
+           }
+       })
+   })
 
    })
  
